@@ -1,0 +1,78 @@
+<div class="custom-text-section" style="text-align:center;">
+  <h2 class="heading__extra-large heading-section__heading title"> {{ section.settings.custom_text_title }} </h2>
+  <div style="margin-bottom:20px;">{{ section.settings.custom_text_body }}</div>
+  <a href="{{ section.settings.link }}" class="button">{{ section.settings.linktext }}</a>
+</div>
+
+{% schema %}
+  {
+    "name": "Dimi test",
+    "settings": [
+      {
+        "id": "custom_text_title",
+        "type": "text",
+        "label": "Text box heading",
+        "default": "Title"
+      },
+      {
+        "id": "custom_text_body",
+        "type": "richtext",
+        "label": "Add custom text below",
+        "default": "<p>Add your text here</p>"
+      },
+ {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Top spacing",
+        "min": 0,
+        "max": 80,
+        "default": 20,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Bottom spacing",
+        "min": 0,
+        "max": 80,
+        "default": 0,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "padding_left",
+        "label": "Left spacing",
+        "min": 0,
+        "max": 80,
+        "default": 0,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "padding_right",
+        "label": "Right spacing",
+        "default": 0,
+        "min": 0,
+        "max": 80,
+        "unit": "px"
+      },
+{
+      "id": "link",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "linktext",
+      "type": "text",
+      "label": "Button text",
+      "default": "Click Here"
+    }
+    ],
+    "presets": [
+      {
+        "name": "Dimi Test",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}
